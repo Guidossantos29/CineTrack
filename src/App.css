@@ -18,27 +18,3 @@ body{
     flex-direction: column;
 }
 
-.headerContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #161617;
-    width: 100%;
-    padding: 22px;
-}
-
-.logo{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    background-color: transparent;
-   
-}
-
-.favoritosButton{
-    text-decoration: none;
-    color: white;
-    background-color: orange;
-    padding: 6px;
-    border-radius: 6px;
-}
