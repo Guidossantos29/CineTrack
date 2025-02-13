@@ -2,6 +2,7 @@ import { replace, useNavigate, useParams } from "react-router-dom"
 import api from "../../api"
 import { useState, useEffect, } from "react"
 import './styles.css'
+import { toast } from "react-toastify"
 
 
 export function Film() {
@@ -48,13 +49,13 @@ export function Film() {
         const hasFilm = filmsSalvos.some((filmsSalvo => filmsSalvo.id === film.id))
 
         if (hasFilm) {
-            alert("Esse filme já esta na lista")
+            toast.warn("este filme ja esta na sua lista")
             return
         }
 
         filmsSalvos.push(film)
         localStorage.setItem("@cineTrack", JSON.stringify(filmsSalvos))
-        alert("film salvo com sucesso")
+        toast.success("Filme salvo com sucesso")
     }
 
     if (loading) {

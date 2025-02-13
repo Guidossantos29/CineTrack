@@ -1,15 +1,16 @@
-
+import { ToastContainer } from 'react-toastify'
 import './App.css'
 import RoutesApp from './routes'
 
 
 function App() {
- 
+
 
   return (
     <>
       <div>
-        <RoutesApp/>
+        <ToastContainer autoClose={3000}/> 
+        <RoutesApp />
       </div>
     </>
   )
