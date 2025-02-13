@@ -17,7 +17,7 @@ function Home() {
                     page: 1
                 }
             })
-            console.log(response.data.results.slice(0, 10))
+            
             setFilms(response.data.results.slice(0, 10))
             setLoading(false)
         }
@@ -43,8 +43,8 @@ function Home() {
                     return (
                         <article key={film.id}>
                             <strong>{film.title}</strong>
-                            <img src={`http://image.tmdb.org/t/p/original/${film.poster_path}`} alt={film.title} />
-                            <Link to={`/filme/${film.id}`} >Veja mais</Link>
+                            <img src={`http://image.tmdb.org/t/p/original/${film.backdrop_path}`} alt={film.title} />
+                            <Link to={`/films/${film.id}`} >Veja mais</Link>
                         </article>
                     )
                 })}
