@@ -42,7 +42,7 @@ export function Favoritos() {
                             <span>{film.title}</span>
 
                             <div>
-                                <Link to="/films/favoritos">Ver detalhes</Link>
+                                <Link to={`/films/${film.id}`}>Ver detalhes</Link>
                                 <button onClick={() => excluirFilme(film.id)}>Excluir</button>
                             </div>
 
